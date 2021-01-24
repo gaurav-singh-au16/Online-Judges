@@ -61,9 +61,9 @@ def solve(s):
         if j in "aeiouAEIOU":
             cnt2 += 1
     if cnt1 == cnt2:
-        return True, a, b, cnt1, cnt2
+        return True
     else:
-        return False, a, b, cnt1, cnt2
+        return False
 if __name__ == "__main__":
     s = "textbook"
     print(solve(s))
