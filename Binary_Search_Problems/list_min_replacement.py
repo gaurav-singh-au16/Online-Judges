@@ -25,12 +25,13 @@ Rate
 class Solution:
     def solve(self, nums):
         ans = []
-        check = []
+        mini = 0
         for i in range(len(nums)):
             if i == 0:
                 ans.append(i)
-                check.append(nums[i])
+                mini = nums[i]
             else:
-                ans.append(min(check))
-                check.append(nums[i])
+                ans.append(mini)
+                if nums[i] < mini:
+                    mini = nums[i]
         return ans
